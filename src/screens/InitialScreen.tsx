@@ -1,12 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, ImageBackground } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Pressable } from "react-native";
+import { StackTypes } from "../routes/stack.routes";
+import Button from "../components/button";
 
 const imageB = require("../images/planta.png");
 
 function InitialScreen() {
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackTypes>();
 
   function navigateTab() {
     navigation.navigate("Home");
@@ -22,12 +23,18 @@ function InitialScreen() {
         </Text>
       </View>
       <View style={Styles.buttonContainer}>
-        <Pressable style={Styles.button} onPress={navigateTab}>
-          <Text style={Styles.buttonText}>Sign-In</Text>
-        </Pressable>
-        <Pressable style={Styles.button} onPress={navigateTab}>
-          <Text style={Styles.buttonText}>Sign-Up</Text>
-        </Pressable>
+        <Button
+          title="Sign-in"
+          onPress={navigateTab}
+          style={Styles.button}
+          textStyle={Styles.buttonText}
+        />
+        <Button
+          title="Sign-up"
+          onPress={navigateTab}
+          style={Styles.button}
+          textStyle={Styles.buttonText}
+        />
       </View>
     </View>
   );
@@ -45,20 +52,7 @@ const Styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 50,
   },
-  button: {
-    height: 48,
-    borderRadius: 8,
-    marginTop: 10,
-    backgroundColor: "#418B64",
-    justifyContent: "center",
-    alignItems: "center",
-    width: 325,
-    margin: 4,
-  },
-  buttonText: {
-    fontSize: 18,
-    color: "white",
-  },
+
   text: {
     alignItems: "center",
     fontSize: 50,
@@ -77,5 +71,19 @@ const Styles = StyleSheet.create({
     width: 376,
     height: 442,
     flex: 1,
+  },
+  button: {
+    height: 48,
+    borderRadius: 8,
+    marginTop: 10,
+    backgroundColor: "#418B64",
+    justifyContent: "center",
+    alignItems: "center",
+    width: 325,
+    margin: 4,
+  },
+  buttonText: {
+    fontSize: 18,
+    color: "white",
   },
 });

@@ -1,17 +1,20 @@
 import React from "react";
 
-import { Pressable, Text } from "react-native";
+import { TouchableOpacity, Text } from "react-native";
 
 interface ButtonProps {
   title: string;
-  onPress: any;
+  onPress: () => void;
+  textStyle?: any;
   style: any;
 }
 
-function Button({ title, onPress, style }: ButtonProps) {
-  <Pressable style={style} onPress={onPress}>
-    <Text>{title}</Text>
-  </Pressable>;
+function Button({ title, onPress, textStyle, style }: ButtonProps) {
+  return (
+    <TouchableOpacity style={style} onPress={onPress}>
+      <Text style={textStyle}>{title}</Text>
+    </TouchableOpacity>
+  );
 }
 
 export default Button;
