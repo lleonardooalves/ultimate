@@ -71,6 +71,7 @@ const Styles = StyleSheet.create({
   },
   textContainer: {
     marginRight: 70,
+    marginBottom: 20,
   },
   imageB: {
     width: 376,

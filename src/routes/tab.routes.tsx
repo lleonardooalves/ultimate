@@ -16,7 +16,11 @@ function TabRoutes() {
         tabBarLabelStyle: { margin: 7, fontSize: 14 },
       }}
     >
-      <Tab.Screen name="Home" component={HomeTab} />
+      <Tab.Screen
+        name="Home"
+        component={HomeTab}
+        options={{ headerShown: false }}
+      />
       <Tab.Screen name="Favorites" component={FavoritesTab} />
       <Tab.Screen name="Cart" component={CartTab} />
     </Tab.Navigator>
