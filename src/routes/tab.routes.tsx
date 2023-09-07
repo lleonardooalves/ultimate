@@ -21,8 +21,16 @@ function TabRoutes() {
         component={HomeTab}
         options={{ headerShown: false }}
       />
-      <Tab.Screen name="Favorites" component={FavoritesTab} />
-      <Tab.Screen name="Cart" component={CartTab} />
+      <Tab.Screen
+        name="Favorites"
+        component={FavoritesTab}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name="Cart"
+        component={CartTab}
+        options={{ headerShown: false }}
+      />
     </Tab.Navigator>
   );
 }

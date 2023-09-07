@@ -65,6 +65,8 @@ export default HomeTab;
 const Styles = StyleSheet.create({
   container: {
     padding: 17,
+    backgroundColor: "#fff",
+    flex: 1,
   },
   imageB: {
     width: 327,
@@ -79,8 +81,8 @@ const Styles = StyleSheet.create({
     elevation: 2,
   },
   cardContainer: {
-    alignItems: "center",
     marginTop: 100,
+    marginLeft: 18,
   },
   textContainer: {
     padding: 15,
@@ -101,6 +103,7 @@ const Styles = StyleSheet.create({
     borderRadius: 8,
     overflow: "hidden",
     elevation: 2,
+    marginLeft: 18,
   },
   cardOneContainer: {
     flexDirection: "row",
@@ -110,10 +113,11 @@ const Styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   header: {
-    marginTop: 32,
+    marginTop: 50,
     backgroundColor: "#fff",
     flexDirection: "row",
     justifyContent: "space-between",
+    marginLeft: 18,
   },
   buttonRadius: {
     width: 30,
@@ -156,6 +160,7 @@ const Styles = StyleSheet.create({
     fontSize: 20,
     fontStyle: "normal",
     fontWeight: "600",
+    marginLeft: 18,
   },
   textHeader: {
     fontSize: 24,
