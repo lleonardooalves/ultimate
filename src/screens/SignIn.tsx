@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { ActivityIndicator, Text, TouchableOpacity } from "react-native";
+import { ActivityIndicator, TouchableOpacity } from "react-native";
 
 import { AuthContext } from "../contexts/login";
 import {
@@ -7,9 +7,9 @@ import {
   Button,
   ButtonText,
   Container,
-  Header,
   NewAccount,
   TextIn,
+  TitleInput,
 } from "../styles/signInStyles";
 import { useNavigation } from "@react-navigation/native";
 import { StackTypes } from "../routes/stack.routes";
@@ -27,15 +27,15 @@ export default function SignInScreen() {
   return (
     <Background>
       <Container>
-        <Header>Fill in the Fields</Header>
+        <TitleInput>E-MAIL</TitleInput>
         <TextIn
-          placeholder="Your Email"
+          placeholder="Type your e-mail"
           value={email}
           onChangeText={(text) => setEmail(text)}
         />
-
+        <TitleInput>PASSWORD</TitleInput>
         <TextIn
-          placeholder="Your Password"
+          placeholder="Type your password"
           value={password}
           onChangeText={(text) => setPassword(text)}
           secureTextEntry={true}

@@ -9,18 +9,39 @@ import { StatusBar } from "expo-status-bar";
 import SignInScreen from "../screens/SignIn";
 import SignUpScreen from "../screens/SignUp";
 import PlantDetailScreen from "../screens/PlantDetailScreen";
+import { ButtonFavorites } from "../styles/detailsScreenStyle";
+import Icon from "react-native-vector-icons/MaterialIcons";
+import FavoritesContext, { useFav } from "../contexts/favoritesContext";
+import { useContext } from "react";
+import { useRoute } from "@react-navigation/native";
 
 const Stack = createNativeStackNavigator();
+
+interface Product {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  category: string;
+  categoryId: string;
+  image: string;
+}
 
 type StackNavigator = {
   Home: undefined;
   SignIn: undefined;
   SignUp: undefined;
+  Details: undefined;
 };
 
 export type StackTypes = NativeStackNavigationProp<StackNavigator>;
 
 function StackRoutes() {
+  const { addToFav } = useFav();
+
+  function handleAddToFavs(item: Product) {
+    addToFav(item);
+  }
   return (
     <>
       <StatusBar style="dark" />
@@ -36,16 +57,27 @@ function StackRoutes() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="SignIn"
+          name="Sign In"
           component={SignInScreen}
-          options={{ headerShown: false }}
+          options={{ headerTitleAlign: "center" }}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
-          options={{ headerShown: false }}
+          options={{ headerTitleAlign: "center" }}
         />
-        <Stack.Screen name="Details" component={PlantDetailScreen} />
+        <Stack.Screen
+          name="Details"
+          component={PlantDetailScreen}
+          options={{
+            headerTitleAlign: "center",
+            headerRight: () => (
+              <ButtonFavorites>
+                <Icon name="favorite-border" size={25} />
+              </ButtonFavorites>
+            ),
+          }}
+        />
       </Stack.Navigator>
     </>
   );

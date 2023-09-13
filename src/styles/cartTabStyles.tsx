@@ -38,15 +38,14 @@ export const Logo = styled.ImageBackground`
 `;
 
 export const ButtonContainer = styled.View`
-  padding: 7px;
-  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Buttons = styled.View`
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin-left: 49px;
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -92,9 +91,10 @@ export const SumCard = styled.View`
   height: 30px;
   border: 1px solid #418b64;
   flex-direction: row;
-  margin-bottom: 16px;
   margin-left: 16px;
   justify-content: space-between;
   align-items: center;
-  padding: 6px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
 `;

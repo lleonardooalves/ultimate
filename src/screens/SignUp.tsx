@@ -5,10 +5,10 @@ import {
   Background,
   Button,
   Container,
-  Header,
   TextButton,
   TextIn,
 } from "../styles/signUpStyles";
+import { TitleInput } from "../styles/signInStyles";
 
 export default function SignUpScreen() {
   const [email, setEmail] = useState<string>("");
@@ -27,21 +27,21 @@ export default function SignUpScreen() {
   return (
     <Background>
       <Container>
-        <Header>Register Now</Header>
+        <TitleInput>NAME</TitleInput>
         <TextIn
-          placeholder="Your Name"
+          placeholder="Type your name"
           value={name}
           onChangeText={(text) => setName(text)}
         />
-
+        <TitleInput>E-MAIL</TitleInput>
         <TextIn
-          placeholder="Your Email"
+          placeholder="Type your e-mail address"
           value={email}
           onChangeText={(text) => setEmail(text)}
         />
-
+        <TitleInput>PASSWORD</TitleInput>
         <TextIn
-          placeholder="Your Password"
+          placeholder="Type your password"
           value={password}
           onChangeText={(text) => setPassword(text)}
           secureTextEntry={true}

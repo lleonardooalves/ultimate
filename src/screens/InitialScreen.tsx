@@ -25,10 +25,10 @@ function InitialScreen() {
         <SubText>Find your favorite plants and help the environment</SubText>
       </TextContainer>
       <ButtonContainer>
-        <Buttons onPress={() => navigation.navigate("SignIn")}>
+        <Buttons onPress={() => navigation.navigate("Sign In")}>
           <TextButtons>Sign-In</TextButtons>
         </Buttons>
-        <Buttons onPress={() => navigation.navigate("SignUp")}>
+        <Buttons onPress={() => navigation.navigate("Sign Up")}>
           <TextButtons>Sign-Up</TextButtons>
         </Buttons>
       </ButtonContainer>

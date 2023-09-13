@@ -1,6 +1,7 @@
 import styled from "styled-components/native";
+import { TouchableOpacity } from "react-native";
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
   padding: 17px;
   background: #fff;
   flex: 1;
@@ -12,6 +13,7 @@ export const Header = styled.View`
   flex-direction: row;
   justify-content: space-between;
   margin-left: 18px;
+  padding-bottom: 40px;
 `;
 
 export const HeaderText = styled.Text`
@@ -29,15 +31,16 @@ export const TextOne = styled.Text`
   font-style: normal;
   font-weight: 600;
   margin-left: 18px;
+  padding-bottom: 24px;
 `;
 
 export const CardOneContainer = styled.TouchableOpacity`
   background: #fff;
   width: 287px;
-  height: 140px;
+  height: 143px;
   border-radius: 8px;
   overflow: hidden;
-  margin-left: 18px;
+  margin-left: 15px;
 `;
 
 export const CardOne = styled.View`
@@ -67,7 +70,7 @@ export const TextCardOne = styled.View`
 `;
 
 export const CardContainerTwo = styled.TouchableOpacity`
-  margin-top: 100px;
+  margin-top: 30px;
   margin-left: 18px;
 `;
 
@@ -107,8 +110,8 @@ export const ButtonCart = styled.TouchableOpacity`
   height: 30px;
   border-radius: 15px;
   background: #418b64;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `;
 
 export const ButtonAdd = styled.TouchableOpacity`
@@ -122,4 +125,22 @@ export const TextButtonAdd = styled.Text`
   color: #fff;
   font-size: 12px;
   text-align: center;
+`;
+
+export const ButtonCategoryContainer = styled.View`
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-left: 18px;
+`;
+
+export const ButtonFilter = styled(TouchableOpacity)<{ isActive: boolean }>`
+  font-weight: ${(props) => (props.isActive ? "bold" : "normal")};
+  margin: 10px;
+`;
+
+export const LabelFilter = styled.Text<{ isActive: boolean }>`
+  color: ${(props) => (props.isActive ? "#000000" : "#949494")};
+  font-weight: bold;
+  font-size: 16px;
 `;

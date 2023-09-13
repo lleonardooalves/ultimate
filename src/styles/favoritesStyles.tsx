@@ -19,6 +19,7 @@ export const HeaderText = styled.Text`
 export const CardAlign = styled.View`
   align-items: center;
   margin-top: 30px;
+  flex: 1;
 `;
 
 export const CardContainer = styled.View`
@@ -45,8 +46,7 @@ export const ButtonFavorites = styled.TouchableOpacity`
   height: 40px;
   border-radius: 20px;
   background: #fff;
-  margin-left: 110px;
-  margin-top: 8px;
   justify-content: center;
   align-items: center;
+  margin-right: 10px;
 `;

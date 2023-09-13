@@ -7,8 +7,8 @@ export const Background = styled.View`
 
 export const Container = styled.View`
   flex: 1;
-  align-items: center;
   justify-content: center;
+  margin-left: 30px;
 `;
 
 export const TextIn = styled.TextInput`
@@ -18,7 +18,7 @@ export const TextIn = styled.TextInput`
   border-radius: 8px;
   border: 1px solid #418b64;
   margin-bottom: 15px;
-  text-align: center;
+  padding-left: 10px;
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -36,14 +36,15 @@ export const ButtonText = styled.Text`
   color: #fff;
 `;
 
-export const Header = styled.Text`
-  font-size: 50px;
-  font-weight: 600;
-  margin-bottom: 40px;
-`;
-
 export const NewAccount = styled.Text`
   font-size: 15px;
   color: #418b64;
   margin-top: 5px;
+`;
+
+export const TitleInput = styled.Text`
+  font-size: 15px;
+  color: #969595;
+  margin-bottom: 5px;
+  text-align: left;
 `;
