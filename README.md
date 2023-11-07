@@ -7,7 +7,8 @@
 - React Navigation
 - Axios
 - Styled Components
-- 
+- Hooks
+  
 ### Seguintes Telas
 <h1>
   <img src="./assets/Screens.png"
